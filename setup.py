@@ -21,12 +21,12 @@ with open(os.path.join(this_directory, 'requirements.txt'), encoding='utf-8') as
 setup(
     name="puzzle-piece-finder",
     version="1.0.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Tiago Pita",
+    author_email="tiagomsp18@ua.pt",
     description="Computer vision system for solving jigsaw puzzles",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/your-username/puzzle-piece-finder",
+    url="https://github.com/BravooZ/puzzle-piece-finder",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -76,9 +76,9 @@ setup(
     include_package_data=True,
     keywords="puzzle, jigsaw, computer-vision, opencv, image-processing, template-matching",
     project_urls={
-        "Bug Reports": "https://github.com/your-username/puzzle-piece-finder/issues",
-        "Source": "https://github.com/your-username/puzzle-piece-finder",
-        "Documentation": "https://your-username.github.io/puzzle-piece-finder/",
-        "Changelog": "https://github.com/your-username/puzzle-piece-finder/blob/main/CHANGELOG.md",
+        "Bug Reports": "https://github.com/BravooZ/puzzle-piece-finder/issues",
+        "Source": "https://github.com/BravooZ/puzzle-piece-finder",
+        "Documentation": "https://BravooZ.github.io/puzzle-piece-finder/",
+        "Changelog": "https://github.com/BravooZ/puzzle-piece-finder/blob/main/CHANGELOG.md",
     },
 )

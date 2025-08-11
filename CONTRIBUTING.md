@@ -6,7 +6,7 @@ Obrigado pelo interesse em contribuir para o projeto! Este guia ajudará você a
 
 ### Reportar Bugs
 
-1. **Verifique** se o bug já foi reportado nas [Issues](https://github.com/your-username/puzzle-piece-finder/issues)
+1. **Verifique** se o bug já foi reportado nas [Issues](https://github.com/BravooZ/puzzle-piece-finder/issues)
 2. **Crie uma nova issue** com:
    - Descrição clara do problema
    - Passos para reproduzir
@@ -122,7 +122,7 @@ python -m pytest --cov=src tests/
 ### Configuração do Ambiente
 ```bash
 # Clone do repositório
-git clone https://github.com/your-username/puzzle-piece-finder.git
+git clone https://github.com/BravooZ/puzzle-piece-finder.git
 cd puzzle-piece-finder
 
 # Ambiente virtual

@@ -6,7 +6,7 @@ Este guia rápido te ajudará a começar a usar o Puzzle Piece Finder em poucos 
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/your-username/puzzle-piece-finder.git
+git clone https://github.com/BravooZ/puzzle-piece-finder.git
 cd puzzle-piece-finder
 
 # 2. Crie ambiente virtual
@@ -100,8 +100,8 @@ Isso significa:
 
 ## 🆘 Precisa de Ajuda?
 
-- **Bug ou erro**: [Abra uma issue](https://github.com/your-username/puzzle-piece-finder/issues)
-- **Dúvidas**: [GitHub Discussions](https://github.com/your-username/puzzle-piece-finder/discussions)
+- **Bug ou erro**: [Abra uma issue](https://github.com/BravooZ/puzzle-piece-finder/issues)
+- **Dúvidas**: [GitHub Discussions](https://github.com/BravooZ/puzzle-piece-finder/discussions)
 - **Documentação completa**: Veja `README.md`
 
 ---
