@@ -1,0 +1,8 @@
+Pillow>=8.0.0
+opencv-python>=4.5.0
+numpy>=1.21.0
+
+# Optional dependencies for enhanced features
+# opencv-contrib-python>=4.5.0  # Additional OpenCV modules
+# matplotlib>=3.3.0             # For advanced plotting
+# scikit-image>=0.18.0          # Additional image processing

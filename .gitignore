@@ -1,0 +1,105 @@
+# .gitignore for Puzzle Piece Finder project
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+data/cache/
+data/temp/
+results/
+output/
+logs/
+*.log
+
+# Large image files (except examples)
+*.tiff
+*.tif
+# Keep example images
+!images/puzzles/*.jpg
+!images/puzzles/*.png
+!images/pieces/*.png
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# OpenCV builds
+opencv_build/
+opencv_contrib/
+
+# Performance profiling
+*.prof
+*.lprof
