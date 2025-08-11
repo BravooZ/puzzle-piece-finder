@@ -1,6 +1,6 @@
 # 🧩 Puzzle Piece Finder
 
-Um sistema inteligente de reconhecimento e localização de peças de puzzle usando algoritmos avançados de visão computacional.
+An intelligent recognition and localization system for puzzle pieces using advanced computer vision algorithms.
 
 <div align="center">
 
@@ -16,63 +16,63 @@ Um sistema inteligente de reconhecimento e localização de peças de puzzle usa
 
 </div>
 
-## 📖 Sobre o Projeto
+## 📖 About The Project
 
-Este projeto implementa um sistema automatizado para resolver puzzles físicos através de análise de imagens. O sistema pode:
-- **Localizar peças** individuais no puzzle completo
-- **Calcular similaridade** entre peças e regiões do puzzle
-- **Otimizar matching** com multi-escala e aceleração GPU
-- **Interface gráfica** intuitiva para facilitar o uso
-- **Análise de métricas** detalhadas de cada peça
+This project implements an automated system for solving physical puzzles through image analysis. The system can:
+- **Locate individual pieces** within the complete puzzle
+- **Calculate similarity** between pieces and puzzle regions
+- **Optimize matching** with multi-scale and GPU acceleration
+- **Intuitive graphical interface** for easy usage
+- **Detailed metrics analysis** for each piece
 
-### 🎯 Características Principais
+### 🎯 Key Features
 
-- **Template Matching Multi-escala**: Algoritmos otimizados para encontrar peças em diferentes tamanhos
-- **Suporte GPU/CUDA**: Aceleração por hardware para processamento rápido
-- **Interface Gráfica Tkinter**: GUI completa com visualização de resultados
-- **Análise de Similaridade**: Métricas avançadas de correspondência de cores e formas
-- **Detecção de Sobreposições**: Identificação automática de conflitos entre peças
-- **Exportação de Resultados**: Salvamento de dados em formato JSON
+- **Multi-scale Template Matching**: Optimized algorithms to find pieces at different scales
+- **GPU/CUDA Support**: Hardware acceleration for fast processing
+- **Tkinter Graphical Interface**: Complete GUI with result visualization
+- **Similarity Analysis**: Advanced metrics for color and shape correspondence
+- **Overlap Detection**: Automatic identification of conflicts between pieces
+- **Result Export**: Data saving in JSON format
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 puzzle_piece_finder/
-├── src/                          # Código fonte principal
-│   ├── acquisition.py            # Carregamento e pré-processamento de imagens
-│   ├── features.py               # Extração de características das imagens
-│   ├── matching.py               # Algoritmos de matching e comparação
-│   ├── gui.py                    # Interface gráfica do usuário
-│   ├── main.py                   # Script principal (CLI)
-│   ├── segmentation.py           # Módulo de segmentação (em desenvolvimento)
-│   └── visualization.py          # Funções de visualização (em desenvolvimento)
-├── images/                       # Dados de exemplo
-│   ├── puzzles/                  # Imagens de puzzles completos
-│   └── pieces/                   # Imagens de peças individuais
-│       ├── piece_0.png → piece_23.png  # 24 peças de exemplo
-│       └── puzzle.json           # Metadados das peças
-├── data/                         # Dados processados e cache
-├── notebooks/                    # Jupyter notebooks para análise
-├── requirements.txt              # Dependências Python
-└── README.md                     # Este arquivo
+├── src/                          # Main source code
+│   ├── acquisition.py            # Image loading and preprocessing
+│   ├── features.py               # Image feature extraction
+│   ├── matching.py               # Matching and comparison algorithms
+│   ├── gui.py                    # Graphical user interface
+│   ├── main.py                   # Main script (CLI)
+│   ├── segmentation.py           # Segmentation module (in development)
+│   └── visualization.py          # Visualization functions (in development)
+├── images/                       # Example data
+│   ├── puzzles/                  # Complete puzzle images
+│   └── pieces/                   # Individual piece images
+│       ├── piece_0.png → piece_23.png  # 24 example pieces
+│       └── puzzle.json           # Piece metadata
+├── data/                         # Processed data and cache
+├── notebooks/                    # Jupyter notebooks for analysis
+├── requirements.txt              # Python dependencies
+└── README.md                     # This file
 ```
 
-## 🚀 Instalação e Configuração
+## 🚀 Installation and Setup
 
-### Pré-requisitos
+### Prerequisites
 
 - **Python 3.8+**
-- **Pip** (gerenciador de pacotes Python)
-- **Git** (para clonagem do repositório)
+- **Pip** (Python package manager)
+- **Git** (for repository cloning)
 
-### 1. Clonar o Repositório
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/BravooZ/puzzle-piece-finder.git
 cd puzzle-piece-finder
 ```
 
-### 2. Criar Ambiente Virtual
+### 2. Create Virtual Environment
 
 ```bash
 # Windows
@@ -84,53 +84,53 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-### 3. Instalar Dependências
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Dependências Principais
+### 4. Main Dependencies
 
 ```
-Pillow>=8.0.0          # Manipulação de imagens
-opencv-python>=4.5.0   # Visão computacional
-numpy>=1.21.0          # Computação numérica
-tkinter                # Interface gráfica (incluído no Python)
+Pillow>=8.0.0          # Image manipulation
+opencv-python>=4.5.0   # Computer vision
+numpy>=1.21.0          # Numerical computing
+tkinter                # Graphical interface (included with Python)
 ```
 
-## 💻 Como Usar
+## 💻 How to Use
 
-### Interface Gráfica (Recomendado)
+### Graphical Interface (Recommended)
 
 ```bash
 python src/gui.py
 ```
 
-A interface gráfica oferece:
-- **Carregamento visual** de puzzles e peças
-- **Configuração de parâmetros** em tempo real
-- **Visualização de resultados** com overlays
-- **Controles de matching** individual ou em lote
-- **Análise estatística** automática
+The graphical interface offers:
+- **Visual loading** of puzzles and pieces
+- **Real-time parameter configuration**
+- **Result visualization** with overlays
+- **Individual or batch matching** controls
+- **Automatic statistical analysis**
 
-### Interface de Linha de Comando
+### Command Line Interface
 
 ```bash
 python src/main.py
 ```
 
-Para uso programático:
+For programmatic usage:
 
 ```python
 from src.acquisition import load_puzzle, load_piece
 from src.matching import multi_scale_template_match
 
-# Carregar imagens
+# Load images
 puzzle_img = load_puzzle()
 piece_img = load_piece()
 
-# Executar matching
+# Execute matching
 result = multi_scale_template_match(
     puzzle_img=puzzle_img,
     piece_img=piece_img,
@@ -138,67 +138,67 @@ result = multi_scale_template_match(
     use_downscale=True
 )
 
-print(f"Melhor posição: {result['best_position']}")
-print(f"Similaridade: {result['refined_similarity']:.2%}")
+print(f"Best position: {result['best_position']}")
+print(f"Similarity: {result['refined_similarity']:.2%}")
 ```
 
-## 🔧 Funcionalidades Avançadas
+## 🔧 Advanced Features
 
-### Aceleração GPU (CUDA)
+### GPU Acceleration (CUDA)
 
-Para ativar a aceleração GPU, é necessário OpenCV compilado com CUDA:
+To enable GPU acceleration, you need OpenCV compiled with CUDA:
 
-#### Verificar Suporte CUDA
+#### Check CUDA Support
 ```python
 import cv2
-print("CUDA habilitado:", cv2.cuda.getCudaEnabledDeviceCount() > 0)
+print("CUDA enabled:", cv2.cuda.getCudaEnabledDeviceCount() > 0)
 ```
 
-#### Instalação OpenCV-CUDA (Windows)
-1. **Instalar NVIDIA CUDA Toolkit** (12.x recomendado)
-2. **Visual Studio Build Tools** com C++
-3. **Compilar OpenCV** com flags CUDA ativadas
+#### OpenCV-CUDA Installation (Windows)
+1. **Install NVIDIA CUDA Toolkit** (12.x recommended)
+2. **Visual Studio Build Tools** with C++
+3. **Compile OpenCV** with CUDA flags enabled
 
 ```bash
-# Verificação rápida
+# Quick verification
 python -c "import cv2; print('CUDA devices:', cv2.cuda.getCudaEnabledDeviceCount())"
 ```
 
-### Configurações de Performance
+### Performance Settings
 
-#### Para Puzzles Grandes (>2000px)
+#### For Large Puzzles (>2000px)
 ```python
 result = multi_scale_template_match(
     puzzle_img=puzzle,
     piece_img=piece,
-    use_downscale=True,    # Downscale automático
-    use_gpu=True,          # Se disponível
-    method='SQDIFF_NORMED' # Método mais rápido
+    use_downscale=True,    # Automatic downscaling
+    use_gpu=True,          # If available
+    method='SQDIFF_NORMED' # Fastest method
 )
 ```
 
-#### Para Máxima Precisão
+#### For Maximum Precision
 ```python
 result = multi_scale_template_match(
     puzzle_img=puzzle,
     piece_img=piece,
     use_downscale=False,   # Full resolution
-    num_pieces=24,         # Hint para melhor escala
-    method='CCORR_NORMED'  # Método mais preciso
+    num_pieces=24,         # Hint for better scale
+    method='CCORR_NORMED'  # Most accurate method
 )
 ```
 
-## 📊 Análise de Resultados
+## 📊 Results Analysis
 
-### Métricas Disponíveis
+### Available Metrics
 
-- **Posição Ótima**: Coordenadas (x, y) da melhor localização
-- **Fator de Escala**: Redimensionamento aplicado à peça
-- **Similaridade**: Score de 0-100% de correspondência
-- **Cobertura**: Percentual de área do puzzle ocupado
-- **Detecção de Sobreposições**: Identificação de conflitos
+- **Optimal Position**: Coordinates (x, y) of the best location
+- **Scale Factor**: Scaling applied to the piece
+- **Similarity**: 0-100% matching score
+- **Coverage**: Percentage of puzzle area occupied
+- **Overlap Detection**: Identification of conflicts
 
-### Exemplo de Saída
+### Example Output
 
 ```json
 {
@@ -211,133 +211,93 @@ result = multi_scale_template_match(
 }
 ```
 
-## 🛠️ Desenvolvimento
+## 🛠️ Development
 
-### Arquitetura Modular
+### Modular Architecture
 
-- **`acquisition.py`**: Entrada de dados e validação
-- **`features.py`**: Extração de características visuais
-- **`matching.py`**: Algoritmos de correspondência
-- **`gui.py`**: Interface gráfica completa
-- **`main.py`**: Orquestração e CLI
+- **`acquisition.py`**: Data input and validation
+- **`features.py`**: Visual feature extraction
+- **`matching.py`**: Correspondence algorithms
+- **`gui.py`**: Complete graphical interface
+- **`main.py`**: Orchestration and CLI
 
-### Algoritmos Implementados
+### Implemented Algorithms
 
-1. **Template Matching Multi-escala**
-   - Candidatos de escala automáticos
-   - Refinamento em full-resolution
-   - Otimização por downscaling
+1. **Multi-scale Template Matching**
+   - Automatic scale candidates
+   - Full-resolution refinement
+   - Downscaling optimization
 
-2. **Análise de Características**
-   - Cores dominantes
-   - Cálculo de áreas
-   - Estimativa de escala real
+2. **Feature Analysis**
+   - Dominant colors
+   - Area calculations
+   - Real scale estimation
 
-3. **Matching Otimizado**
-   - Stride configurável para velocidade
-   - Processamento GPU/CPU híbrido
-   - Cache de resultados intermédios
+3. **Optimized Matching**
+   - Configurable stride for speed
+   - Hybrid GPU/CPU processing
+   - Intermediate result caching
 
-### Contribuindo
+### Contributing
 
-1. **Fork** o repositório
-2. **Crie** uma branch para sua feature (`git checkout -b feature/nova-funcionalidade`)
-3. **Commit** suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
-4. **Push** para a branch (`git push origin feature/nova-funcionalidade`)
-5. **Abra** um Pull Request
+1. **Fork** the repository
+2. **Create** a branch for your feature (`git checkout -b feature/new-feature`)
+3. **Commit** your changes (`git commit -m 'Add new feature'`)
+4. **Push** to the branch (`git push origin feature/new-feature`)
+5. **Open** a Pull Request
 
 ## 📈 Roadmap
 
-### Em Desenvolvimento
-- [ ] **Segmentação automática** de peças do puzzle completo
-- [ ] **Análise de bordas** para peças de canto/lateral
-- [ ] **Clustering** de cores para agrupamento inteligente
-- [ ] **Exportação visual** de resultados (imagens anotadas)
+### In Development
+- [ ] **Automatic segmentation** of pieces from complete puzzle
+- [ ] **Edge analysis** for corner/border pieces
+- [ ] **Color clustering** for intelligent grouping
+- [ ] **Visual export** of results (annotated images)
 
-### Futuro
-- [ ] **Machine Learning** para classificação de peças
-- [ ] **Análise de formas** geométricas avançada
-- [ ] **API REST** para integração externa
+### Future
+- [ ] **Machine Learning** for piece classification
+- [ ] **Advanced geometric shape analysis**
+- [ ] **REST API** for external integration
 - [ ] **Docker** containerization
 
-## ⚡ Performance e Otimização
+## ⚡ Performance and Optimization
 
-### Benchmarks Típicos
+### Typical Benchmarks
 
-| Configuração | Tempo (24 peças) | GPU | Precisão |
-|-------------|------------------|-----|----------|
+| Configuration | Time (24 pieces) | GPU | Accuracy |
+|---------------|------------------|-----|----------|
 | CPU + Downscale | ~15s | ❌ | 85-90% |
 | CPU Full-Res | ~45s | ❌ | 90-95% |
 | GPU + Downscale | ~8s | ✅ | 85-90% |
 | GPU Full-Res | ~20s | ✅ | 90-95% |
 
-### Dicas de Otimização
+### Optimization Tips
 
-- **Use downscale** para puzzles >1500px
-- **GPU recomendada** para lotes >10 peças
-- **Reduzir candidatos** de escala para casos específicos
-- **Cache results** para análises repetitivas
+- **Use downscaling** for puzzles >1500px
+- **GPU recommended** for batches >10 pieces
+- **Reduce scale candidates** for specific cases
+- **Cache results** for repetitive analyses
 
-## 🔍 Solução de Problemas
+## 🔍 Troubleshooting
 
-### Problemas Comuns
+### Common Issues
 
-#### OpenCV/CUDA não funciona
+#### OpenCV/CUDA not working
 ```bash
-# Verificar instalação
+# Check installation
 python -c "import cv2; print(cv2.getBuildInformation())"
 ```
 
-#### Memória insuficiente
-- Reduzir tamanho das imagens
-- Ativar `use_downscale=True`
-- Processar peças individualmente
+#### Insufficient memory
+- Reduce image sizes
+- Enable `use_downscale=True`
+- Process pieces individually
 
-#### Performance lenta
-- Verificar se GPU está sendo usada
-- Reduzir `stride` do sliding window
-- Usar imagens em formato otimizado (PNG)
+#### Slow performance
+- Check if GPU is being used
+- Reduce sliding window `stride`
+- Use optimized image format (PNG)
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## 🤝 Créditos
-
-- **OpenCV** - Biblioteca de visão computacional
-- **Pillow** - Processamento de imagens Python
-- **NumPy** - Computação numérica eficiente
-- **Tkinter** - Interface gráfica nativa Python
-
-## 📧 Contato e Suporte
-
-- **Issues**: [GitHub Issues](https://github.com/BravooZ/puzzle-piece-finder/issues) para reportar bugs
-- **Discussions**: [GitHub Discussions](https://github.com/BravooZ/puzzle-piece-finder/discussions) para perguntas
-- **Contribuições**: Veja [CONTRIBUTING.md](CONTRIBUTING.md) para guidelines
-- **Changelog**: Veja [CHANGELOG.md](CHANGELOG.md) para histórico de versões
-
-### Links Úteis
-
-- **[Documentação Completa](https://BravooZ.github.io/puzzle-piece-finder/)** (em breve)
-- **[Tutorial em Vídeo](https://youtu.be/example)** (em breve)
-- **[Artigo Técnico](docs/technical_paper.pdf)** (em breve)
-
-### Citação Acadêmica
-
-Se você usar este projeto em pesquisa acadêmica, por favor cite:
-
-```bibtex
-@software{puzzle_piece_finder,
-  title = {Puzzle Piece Finder: Computer Vision for Jigsaw Puzzle Solving},
-  author = {Your Name},
-  year = {2025},
-  url = {https://github.com/BravooZ/puzzle-piece-finder},
-  version = {1.0.0}
-}
-```
-
----
-
-<div align="center">
-  <strong>Transformando puzzles físicos em desafios computacionais! 🧩✨</strong>
-</div>
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
