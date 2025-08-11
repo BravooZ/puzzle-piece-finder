@@ -1,177 +1,177 @@
 # Contributing to Puzzle Piece Finder
 
-Obrigado pelo interesse em contribuir para o projeto! Este guia ajudará você a começar.
+Thank you for your interest in contributing to the project! This guide will help you get started.
 
-## 🚀 Como Contribuir
+## 🚀 How to Contribute
 
-### Reportar Bugs
+### Report Bugs
 
-1. **Verifique** se o bug já foi reportado nas [Issues](https://github.com/BravooZ/puzzle-piece-finder/issues)
-2. **Crie uma nova issue** com:
-   - Descrição clara do problema
-   - Passos para reproduzir
-   - Comportamento esperado vs. atual
-   - Screenshots (se aplicável)
-   - Versão do Python e sistema operacional
+1. **Check** if the bug has already been reported in [Issues](https://github.com/BravooZ/puzzle-piece-finder/issues)
+2. **Create a new issue** with:
+   - Clear description of the problem
+   - Steps to reproduce
+   - Expected vs. actual behavior
+   - Screenshots (if applicable)
+   - Python version and operating system
 
-### Sugerir Melhorias
+### Suggest Improvements
 
-1. **Abra uma issue** com tag `enhancement`
-2. **Descreva** a funcionalidade proposta
-3. **Explique** por que seria útil
-4. **Considere** implementações alternativas
+1. **Open an issue** with `enhancement` tag
+2. **Describe** the proposed functionality
+3. **Explain** why it would be useful
+4. **Consider** alternative implementations
 
-### Contribuir com Código
+### Contribute Code
 
-1. **Fork** o repositório
-2. **Clone** seu fork localmente
-3. **Crie uma branch** para sua feature:
+1. **Fork** the repository
+2. **Clone** your fork locally
+3. **Create a branch** for your feature:
    ```bash
-   git checkout -b feature/minha-nova-feature
+   git checkout -b feature/my-new-feature
    ```
-4. **Faça suas mudanças** seguindo os padrões do projeto
-5. **Teste** suas mudanças
-6. **Commit** com mensagens descritivas:
+4. **Make your changes** following project standards
+5. **Test** your changes
+6. **Commit** with descriptive messages:
    ```bash
-   git commit -m "feat: adiciona detecção automática de bordas"
+   git commit -m "feat: add automatic edge detection"
    ```
-7. **Push** para sua branch:
+7. **Push** to your branch:
    ```bash
-   git push origin feature/minha-nova-feature
+   git push origin feature/my-new-feature
    ```
-8. **Abra um Pull Request**
+8. **Open a Pull Request**
 
-## 📝 Padrões de Código
+## 📝 Code Standards
 
 ### Style Guide
-- **PEP 8** para estilo Python
-- **Type hints** para funções públicas
-- **Docstrings** para módulos, classes e funções
-- **Comentários** em português ou inglês
+- **PEP 8** for Python style
+- **Type hints** for public functions
+- **Docstrings** for modules, classes, and functions
+- **Comments** in English
 
-### Exemplo de Função
+### Function Example
 ```python
 def calculate_similarity(image1: Image.Image, image2: Image.Image) -> float:
-    """Calcula similaridade entre duas imagens.
+    """Calculate similarity between two images.
     
     Args:
-        image1: Primeira imagem para comparação
-        image2: Segunda imagem para comparação
+        image1: First image for comparison
+        image2: Second image for comparison
         
     Returns:
-        float: Valor de similaridade entre 0.0 e 1.0
+        float: Similarity value between 0.0 and 1.0
         
     Raises:
-        ValueError: Se as imagens têm tamanhos incompatíveis
+        ValueError: If images have incompatible sizes
     """
-    # Implementação aqui
+    # Implementation here
     pass
 ```
 
-### Estrutura de Commits
-- `feat:` nova funcionalidade
-- `fix:` correção de bug
-- `docs:` alterações na documentação
-- `style:` formatação, sem mudança de código
-- `refactor:` refatoração sem alterar funcionalidade
-- `test:` adicionar ou alterar testes
-- `perf:` melhoria de performance
+### Commit Structure
+- `feat:` new feature
+- `fix:` bug fix
+- `docs:` documentation changes
+- `style:` formatting, no code changes
+- `refactor:` refactoring without changing functionality
+- `test:` add or change tests
+- `perf:` performance improvement
 
-## 🧪 Testando
+## 🧪 Testing
 
-### Executar Testes Localmente
+### Run Tests Locally
 ```bash
-# Instalar dependências de desenvolvimento
+# Install development dependencies
 pip install -r requirements-dev.txt
 
-# Executar testes
+# Run tests
 python -m pytest tests/
 
-# Com cobertura
+# With coverage
 python -m pytest --cov=src tests/
 ```
 
-### Testando a GUI
-- Teste todas as funcionalidades principais
-- Verifique comportamento com imagens de diferentes tamanhos
-- Confirme que cancelamento funciona corretamente
-- Teste com e sem GPU habilitada
+### Testing the GUI
+- Test all main functionalities
+- Check behavior with different image sizes
+- Confirm cancellation works correctly
+- Test with and without GPU enabled
 
-## 📚 Áreas que Precisam de Ajuda
+## 📚 Areas That Need Help
 
-### Alta Prioridade
-- [ ] **Testes unitários** para módulos de matching
-- [ ] **Documentação** de APIs internas
-- [ ] **Otimização** de algoritmos de template matching
-- [ ] **Tratamento de erros** mais robusto
+### High Priority
+- [ ] **Unit tests** for matching modules
+- [ ] **Documentation** for internal APIs
+- [ ] **Optimization** of template matching algorithms
+- [ ] **More robust error handling**
 
-### Funcionalidades Desejadas
-- [ ] **Segmentação automática** de peças
-- [ ] **Machine learning** para classificação
-- [ ] **API REST** para integração
-- [ ] **Análise de formas** geométricas
+### Desired Features
+- [ ] **Automatic segmentation** of pieces
+- [ ] **Machine learning** for classification
+- [ ] **REST API** for integration
+- [ ] **Geometric shape analysis**
 
-### Melhorias de UX
-- [ ] **Drag & drop** de imagens na GUI
-- [ ] **Preview** de resultados em tempo real
-- [ ] **Configurações** persistentes
-- [ ] **Internacionalização** (i18n)
+### UX Improvements
+- [ ] **Drag & drop** images in GUI
+- [ ] **Real-time preview** of results
+- [ ] **Persistent settings**
+- [ ] **Internationalization** (i18n)
 
-## 💡 Dicas para Contribuidores
+## 💡 Tips for Contributors
 
-### Configuração do Ambiente
+### Environment Setup
 ```bash
-# Clone do repositório
+# Clone repository
 git clone https://github.com/BravooZ/puzzle-piece-finder.git
 cd puzzle-piece-finder
 
-# Ambiente virtual
+# Virtual environment
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# ou
+# or
 venv\Scripts\activate     # Windows
 
-# Instalar em modo desenvolvimento
+# Install in development mode
 pip install -e .
 pip install -r requirements-dev.txt
 ```
 
-### Debug e Performance
-- Use **cProfile** para identificar bottlenecks
-- **Logs detalhados** para debugging
-- **Profiling de GPU** com nvidia-smi
-- **Memory profiling** com memory_profiler
+### Debug and Performance
+- Use **cProfile** to identify bottlenecks
+- **Detailed logging** for debugging
+- **GPU profiling** with nvidia-smi
+- **Memory profiling** with memory_profiler
 
-### Documentação
-- README sempre atualizado
-- **Docstrings** detalhadas
-- **Exemplos** de uso práticos
-- **Diagramas** para algoritmos complexos
+### Documentation
+- Keep README updated
+- **Detailed docstrings**
+- **Practical usage examples**
+- **Diagrams** for complex algorithms
 
-## 🤝 Código de Conduta
+## 🤝 Code of Conduct
 
-- **Seja respeitoso** e inclusivo
-- **Colabore** de forma construtiva
-- **Mantenha** discussões focadas no projeto
-- **Ajude** outros contribuidores
+- **Be respectful** and inclusive
+- **Collaborate** constructively
+- **Keep** discussions focused on the project
+- **Help** other contributors
 
-## 🆘 Precisa de Ajuda?
+## 🆘 Need Help?
 
-- **Issues**: Para bugs e sugestões
-- **Discussions**: Para perguntas gerais
-- **Email**: [manter privado por enquanto]
-- **Discord/Slack**: [links quando disponíveis]
+- **Issues**: For bugs and suggestions
+- **Discussions**: For general questions
+- **Email**: [keep private for now]
+- **Discord/Slack**: [links when available]
 
-## 🎯 Roadmap de Contribuições
+## 🎯 Contribution Roadmap
 
 ### Q1 2025
-- [ ] Sistema de testes robusto
-- [ ] Documentação API completa
-- [ ] Otimizações de performance
+- [ ] Robust testing system
+- [ ] Complete API documentation
+- [ ] Performance optimizations
 
 ### Q2 2025
-- [ ] Machine learning básico
-- [ ] API REST
+- [ ] Basic machine learning
+- [ ] REST API
 - [ ] Docker deployment
 
 ### Q3+ 2025
@@ -179,4 +179,4 @@ pip install -r requirements-dev.txt
 - [ ] Web interface
 - [ ] Cloud processing
 
-Obrigado por ajudar a tornar este projeto ainda melhor! 🧩✨
+Thank you for helping to make this project even better! 🧩✨

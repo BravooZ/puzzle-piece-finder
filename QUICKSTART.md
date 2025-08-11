@@ -1,109 +1,109 @@
 # Quick Start Guide
 
-Este guia rápido te ajudará a começar a usar o Puzzle Piece Finder em poucos minutos.
+This quick guide will help you start using Puzzle Piece Finder in just a few minutes.
 
-## ⚡ Instalação Rápida
+## ⚡ Quick Installation
 
 ```bash
-# 1. Clone o repositório
+# 1. Clone the repository
 git clone https://github.com/BravooZ/puzzle-piece-finder.git
 cd puzzle-piece-finder
 
-# 2. Crie ambiente virtual
+# 2. Create virtual environment
 python -m venv .venv
 .venv\Scripts\activate  # Windows
 # source .venv/bin/activate  # Linux/Mac
 
-# 3. Instale dependências
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Execute a GUI
+# 4. Run the GUI
 python src/gui.py
 ```
 
-## 🎮 Primeiro Uso
+## 🎮 First Use
 
-### Interface Gráfica (Recomendado)
+### Graphical Interface (Recommended)
 
-1. **Executar GUI**: `python src/gui.py`
-2. **Carregar Puzzle**: Clique em "Load Puzzle" → selecione uma imagem do puzzle completo
-3. **Carregar Peças**: Clique em "Load Pieces" → selecione uma ou mais imagens de peças
-4. **Executar Matching**: Clique em "Match" para uma peça ou "Match All Pieces" para todas
+1. **Run GUI**: `python src/gui.py`
+2. **Load Puzzle**: Click "Load Puzzle" → select a complete puzzle image
+3. **Load Pieces**: Click "Load Pieces" → select one or more piece images
+4. **Execute Matching**: Click "Match" for one piece or "Match All Pieces" for all
 
-### Linha de Comando
+### Command Line
 
 ```bash
-# Executar CLI interativo
+# Run interactive CLI
 python src/main.py
 
-# Siga as instruções na tela para:
-# 1. Selecionar imagem do puzzle
-# 2. Selecionar imagem da peça
-# 3. Ver resultados do matching
+# Follow the on-screen instructions to:
+# 1. Select puzzle image
+# 2. Select piece image
+# 3. View matching results
 ```
 
-## 📊 Interpretando Resultados
+## 📊 Interpreting Results
 
-### Métricas Principais
+### Main Metrics
 
-- **Posição**: Coordenadas (x, y) onde a peça foi encontrada
-- **Similaridade**: 0-100% de correspondência (>80% é muito bom)
-- **Escala**: Fator de redimensionamento aplicado à peça
-- **GPU**: Se aceleração por hardware foi usada
+- **Position**: Coordinates (x, y) where the piece was found
+- **Similarity**: 0-100% correspondence (>80% is very good)
+- **Scale**: Scaling factor applied to the piece
+- **GPU**: Whether hardware acceleration was used
 
-### Exemplo de Output
+### Example Output
 
 ```
-✅ Peça 1: pos=(245, 167), similaridade=87.3%, escala=0.85
+✅ Piece 1: pos=(245, 167), similarity=87.3%, scale=0.85
 ```
 
-Isso significa:
-- A peça foi encontrada na posição (245, 167)
-- 87.3% de confiança no matching (excelente)
-- A peça foi redimensionada para 85% do tamanho original
+This means:
+- The piece was found at position (245, 167)
+- 87.3% confidence in matching (excellent)
+- The piece was resized to 85% of original size
 
-## 🔧 Configurações Importantes
+## 🔧 Important Settings
 
-### Para Melhor Performance
-- ✅ Ative "Downscale" para puzzles grandes (>1500px)
-- ✅ Use "GPU" se tiver OpenCV com CUDA
-- ✅ Configure "#Pieces" com o número real de peças
+### For Better Performance
+- ✅ Enable "Downscale" for large puzzles (>1500px)
+- ✅ Use "GPU" if you have OpenCV with CUDA
+- ✅ Set "#Pieces" with the actual number of pieces
 
-### Para Máxima Precisão
-- ❌ Desative "Downscale" para puzzles pequenos
-- ✅ Configure dimensões reais em cm
-- ✅ Use imagens de alta qualidade
+### For Maximum Precision
+- ❌ Disable "Downscale" for small puzzles
+- ✅ Set real dimensions in cm
+- ✅ Use high-quality images
 
-## 🚨 Problemas Comuns
+## 🚨 Common Problems
 
-### "GPU não disponível"
-- Normal se não tiver CUDA instalado
-- O sistema usa CPU automaticamente
-- Performance ainda é boa para a maioria dos casos
+### "GPU not available"
+- Normal if you don't have CUDA installed
+- System uses CPU automatically
+- Performance is still good for most cases
 
-### "Similaridade muito baixa (<50%)"
-- Verifique se é a peça correta
-- Tente ajustar o "#Pieces"
-- Peça pode estar em escala muito diferente
+### "Very low similarity (<50%)"
+- Check if it's the correct piece
+- Try adjusting "#Pieces"
+- Piece might be at a very different scale
 
-### GUI trava durante matching
-- Use "Cancel" para interromper
-- Reduza tamanho das imagens
-- Ative "Downscale"
+### GUI freezes during matching
+- Use "Cancel" to interrupt
+- Reduce image sizes
+- Enable "Downscale"
 
-## 📈 Próximos Passos
+## 📈 Next Steps
 
-1. **Experimente** com suas próprias imagens de puzzle
-2. **Configure GPU** seguindo o guia no README principal
-3. **Explore** os exemplos em `examples/basic_usage.py`
-4. **Contribua** com melhorias seguindo `CONTRIBUTING.md`
+1. **Experiment** with your own puzzle images
+2. **Set up GPU** following the guide in main README
+3. **Explore** examples in `examples/basic_usage.py`
+4. **Contribute** improvements following `CONTRIBUTING.md`
 
-## 🆘 Precisa de Ajuda?
+## 🆘 Need Help?
 
-- **Bug ou erro**: [Abra uma issue](https://github.com/BravooZ/puzzle-piece-finder/issues)
-- **Dúvidas**: [GitHub Discussions](https://github.com/BravooZ/puzzle-piece-finder/discussions)
-- **Documentação completa**: Veja `README.md`
+- **Bug or error**: [Open an issue](https://github.com/BravooZ/puzzle-piece-finder/issues)
+- **Questions**: [GitHub Discussions](https://github.com/BravooZ/puzzle-piece-finder/discussions)
+- **Complete documentation**: See `README.md`
 
 ---
 
-**Pronto! Você já pode começar a resolver puzzles com IA! 🧩✨**
+**Ready! You can now start solving puzzles with AI! 🧩✨**

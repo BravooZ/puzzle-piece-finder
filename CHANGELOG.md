@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Memory leaks in image processing
 - Coordinate scaling for different image sizes
 
-## [1.0.0] - 2025-01-XX
+## [1.0.0] - 11-08-2025
 
 ### Added
 - Basic CLI interface for puzzle solving
